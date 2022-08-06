@@ -1,0 +1,5 @@
+{
+    "title": "Stateful button",
+    "description": "Button that remembers it's been pushed",
+    "files": ["index.html", "index.js"]
+}
