@@ -1,7 +1,7 @@
 {
-  "name": "browser-native",
+  "name": "web-components",
   "version": "1.0.0",
-  "description": "A sample demonstrating browser-native development",
+  "description": "Various experimental web components",
   "main": "src/main.js",
   "private": true,
   "scripts": {

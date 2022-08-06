@@ -1,8 +1,0 @@
-
-:root {
-    --main-color: lawngreen;
-}
-
-.myClass>div{
-  color: var(--main-color);
-}
