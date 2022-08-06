@@ -1,0 +1,5 @@
+{
+    "title": "Classes",
+    "description": "This sample shows how to use object classes in modern JavaScript",
+    "files": ["index.html", "index.js"]
+}
