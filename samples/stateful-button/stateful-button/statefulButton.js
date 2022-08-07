@@ -4,18 +4,25 @@ export class statefulButton extends HTMLElement {
 
     #key;       // Local storage key for this button
     #state;     // Current state for this button - falsy or true
+    #shadowRoot;
+    #button;
 
     constructor() {
         super();
         this.#key = BUTTON_KEY_PREFIX + this.id;
         this.#state = localStorage.getItem(this.#key);
+
+        const shadowRoot = this.attachShadow({mode: 'open'});
+        this.#button = document.createElement('button');
+        shadowRoot.appendChild(this.#button);
+
     }
 
     #render() {
         if (!this.#state) {
-            this.innerHTML = "OFF";
+            this.#button.innerHTML = "OFF";
         } else {
-            this.innerHTML = "ON";
+            this.#button.innerHTML = "ON";
         }
     }
 
