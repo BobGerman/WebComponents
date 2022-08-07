@@ -1,3 +1,4 @@
+import stylesheet from './style.css' assert { type: 'css' };
 const BUTTON_KEY_PREFIX = 'stateful-button';
 
 export class statefulButton extends HTMLElement {
@@ -13,6 +14,7 @@ export class statefulButton extends HTMLElement {
         this.#state = localStorage.getItem(this.#key);
 
         const shadowRoot = this.attachShadow({mode: 'open'});
+        shadowRoot.adoptedStyleSheets = [ stylesheet ];
         this.#button = document.createElement('button');
         shadowRoot.appendChild(this.#button);
 
