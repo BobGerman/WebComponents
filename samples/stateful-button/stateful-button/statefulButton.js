@@ -5,7 +5,6 @@ export class statefulButton extends HTMLElement {
 
     #key;       // Local storage key for this button
     #state;     // Current state for this button - falsy or true
-    #shadowRoot;
     #button;
 
     constructor() {
@@ -23,8 +22,10 @@ export class statefulButton extends HTMLElement {
     #render() {
         if (!this.#state) {
             this.#button.innerHTML = "OFF";
+            this.#button.className = "buttonOff";
         } else {
             this.#button.innerHTML = "ON";
+            this.#button.className = "buttonOn";
         }
     }
 

@@ -6,13 +6,28 @@
   <link rel="icon" href="data:;base64,="> <!-- Suppress favicon error -->
   <link rel="stylesheet" href="../../assets/style.css">
   <link rel="stylesheet" href="style.css">
+
+  <script type="module" src="stateful-button/statefulButton.js"></script>
 </head>
 
 <body>
 
-  <button>TEST</button>
-  <stateful-button id="foo">(loading)</stateful-button>
-  <script type="module" src="stateful-button/statefulButton.js"></script>
+  <p>This button is on the page:
+    <button>TEST</button>
+  </p>
+  <p>These buttons are web components:
+    <ul>
+      <li>
+        <stateful-button id="foo1">(loading)</stateful-button>
+      </li>
+      <li>
+        <stateful-button id="foo2">(loading)</stateful-button>
+      </li>
+      <li>
+        <stateful-button id="foo3">(loading)</stateful-button>
+      </li>
+    </ul>
+  </p>
 
 </body>
 
